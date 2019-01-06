@@ -2,6 +2,10 @@ var database;
 function fun(){
 	var nam=document.getElementById("text1").value;
 	var usr=document.getElementById("text2").value;
+	if(nam==""||usr==""){
+		alert("Enter name or message property");
+	}
+	else{
 	 database=firebase.database();
   var ref=database.ref('chat');
   var data={
@@ -30,6 +34,7 @@ function fun(){
   		list.appendChild(entry);
   		
   	}
+  }
   }
   function errData(err){
   	console.log("Error");
