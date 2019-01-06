@@ -7,6 +7,8 @@ function fun(){
 	}
 	else{
 	 database=firebase.database();
+	
+	
   var ref=database.ref('chat');
   var data={
   	name:nam,
