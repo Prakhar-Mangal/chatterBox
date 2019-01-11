@@ -1,32 +1,35 @@
+<!DOCTYPE html>
 <html>
 <head>
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDtJJKcM2oS2GlfQI-18g4jpOUK63OcP8Q",
-    authDomain: "first-project-21138.firebaseapp.com",
-    databaseURL: "https://first-project-21138.firebaseio.com",
-    projectId: "first-project-21138",
-    storageBucket: "first-project-21138.appspot.com",
-    messagingSenderId: "669135762079"
-  };
-  firebase.initializeApp(config);
-  
+	<script type="text/javascript">
+	function createRoom(){
+		var admin=document.getElementById("admin").value;
+		var pass=document.getElementById("pass").value;
+    if(pass==""||admin=="")
+      alert("Enter Id or password correctly");
+    else
+		window.location.href= "first.html?admin="+admin+"&pass="+pass;
 
-</script>
-<script src="demo.js" type="text/javascript">
-</script>
+	}
+
+		function joinRoom(){
+			var join=document.getElementById("join").value;
+      if(join==""){
+        alert("enter id correctly")
+      }
+      else{
+        
+			window.location.href= "first.html?join="+join;
+}
+		}
+
+	</script>
 </head>
-<body onload="fun()">
-<p>
-<ul id="chatlist">
-</ul>
-</p>
-<input id="text1" placeholder="Enter Name" ><br>
-<input id="text2" placeholder="Enter Text"><br>
-<button onclick="fun()" >Submit</button>
+<body>
+Join <input id="join" type="text" name=""><button onclick="joinRoom()">join</button><br> 
+<input type="text" id="admin" name="" placeholder="ID"><br>
+<input type="password" name="" id="pass" placeholder="password"><br>
+<button onclick="createRoom()">create</button>
 
 </body>
 </html>
