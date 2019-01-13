@@ -24,21 +24,24 @@
     visibility: hidden;
   }
 
+
 </style>
 
 </head>
 <body onload="getRoom()">
 <p>
+<ol id="userlist">
+</ol>
 <ul id="chatlist">
 </ul>
 </p>
 <label id="roomtype"  class="lab" >Room Type</label><br>
-<input id="text1" placeholder="Enter Name" ><br>
-<input id="text2" placeholder="Enter Text"><br>
+<!-- <input id="text1" placeholder="Enter Name" ><br>
+ --><input id="text2" placeholder="Enter Text"><br>
 <button onclick="fun()" >Submit</button><br>
 
 For Distroy chat type password <input type="text" id="dis" name=""><br>
-<button onclick="distroy()">Distroy</button>
+<button onclick="destroy()">Destroy</button>
 
 </body>
 </html>

@@ -5,31 +5,39 @@
 	function createRoom(){
 		var admin=document.getElementById("admin").value;
 		var pass=document.getElementById("pass").value;
-    if(pass==""||admin=="")
-      alert("Enter Id or password correctly");
+		var name=document.getElementById("cname").value;
+    if(pass==""||admin==""||name=="")
+      alert("Enter name or Id or password correctly");
     else
-		window.location.href= "first.html?admin="+admin+"&pass="+pass;
+		window.location.href= "first.html?admin="+admin+"&pass="+pass+"&name="+name;
 
 	}
 
 		function joinRoom(){
 			var join=document.getElementById("join").value;
-      if(join==""){
-        alert("enter id correctly")
+			var name=document.getElementById("jname").value;
+      if(join==""||name==""){
+        alert("enter name or id correctly");
       }
       else{
         
-			window.location.href= "first.html?join="+join;
+			window.location.href= "first.html?join="+join+"&name="+name;
 }
 		}
 
 	</script>
 </head>
 <body>
-Join <input id="join" type="text" name=""><button onclick="joinRoom()">join</button><br> 
-<input type="text" id="admin" name="" placeholder="ID"><br>
+<hr>
+ Join Room<br>
+ <input type="text" id="jname" placeholder="Enter Name" name=""><br>
+ <input id="join" placeholder="Enter ID" type="text" name=""><br>
+ <button onclick="joinRoom()">join</button><br><hr>
+ Create Room<br>
+  <input type="text" id="cname" placeholder="Enter Name" name=""><br>
+<input type="text" id="admin" name="" placeholder="Enter ID"><br>
 <input type="password" name="" id="pass" placeholder="password"><br>
-<button onclick="createRoom()">create</button>
+<button onclick="createRoom()">create</button><br><hr>
 
 </body>
 </html>
