@@ -26,23 +26,27 @@
  #userlist{
   color:red;
  }
+ #la1{
+  color:red;
+ }
 
 </style>
 
 </head>
 <body onload="getRoom()">
-<p>
+<p><hr>
+<label id="la1" >Members in the Room:------</label>
 <ol id="userlist">
-</ol>
+</ol><hr>
 <ul id="chatlist">
-</ul>
+</ul><hr>
 </p>
 <label id="roomtype"  class="lab" >Room Type</label><br>
 <!-- <input id="text1" placeholder="Enter Name" ><br>
  --><input id="text2" placeholder="Enter Text"><br>
 <button onclick="fun()" >Submit</button><br>
 
-For Distroy chat type password <input type="text" id="dis" name=""><br>
+For Destroy chat type password <input type="text" id="dis" name=""><br>
 <button onclick="destroy()">Destroy</button>
 
 </body>
