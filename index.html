@@ -1,31 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script type="text/javascript">
-	function createRoom(){
-		var admin=document.getElementById("admin").value;
-		var pass=document.getElementById("pass").value;
-		var name=document.getElementById("cname").value;
-    if(pass==""||admin==""||name=="")
-      alert("Enter name or Id or password correctly");
-    else
-		window.location.href= "first.html?admin="+admin+"&pass="+pass+"&name="+name;
 
-	}
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDtJJKcM2oS2GlfQI-18g4jpOUK63OcP8Q",
+    authDomain: "first-project-21138.firebaseapp.com",
+    databaseURL: "https://first-project-21138.firebaseio.com",
+    projectId: "first-project-21138",
+    storageBucket: "first-project-21138.appspot.com",
+    messagingSenderId: "669135762079"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="demo.js" type="text/javascript">
+</script>
 
-		function joinRoom(){
-			var join=document.getElementById("join").value;
-			var name=document.getElementById("jname").value;
-      if(join==""||name==""){
-        alert("enter name or id correctly");
-      }
-      else{
-        
-			window.location.href= "first.html?join="+join+"&name="+name;
-}
-		}
 
-	</script>
 </head>
 <body>
 <hr>
